@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+
+    <PackageId>Demo.Components</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>CI-CD Lab</Authors>
+    <Description>Internal demo component used for the Nexus NuGet lab.</Description>
+
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+</Project>

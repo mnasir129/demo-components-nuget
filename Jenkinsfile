@@ -30,16 +30,15 @@ agent {
         }
 
         stage('Show Branch') {
-            steps {
-                sh '''
-                    echo "================================"
-                    echo "Jenkins branch: $BRANCH_NAME"
-                    echo "Git commit:"
-                    git rev-parse HEAD
-                    echo "================================"
-                '''
-            }
-        }
+    steps {
+        sh '''
+            echo "================================"
+            echo "Jenkins branch: $BRANCH_NAME"
+            echo "Git commit: $GIT_COMMIT"
+            echo "================================"
+        '''
+    }
+}
 
         stage('Compile') {
             steps {

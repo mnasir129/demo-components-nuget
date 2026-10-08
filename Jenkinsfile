@@ -2,15 +2,17 @@
 
 pipeline {
 
-    agent {
-        docker {
-            image '172.28.52.31:8081/docker-group/local-dotnet9:latest'
-            reuseNode true
-            alwaysPull true
-            label 'oracle'
-            args '-u 0:0'
-        }
+agent {
+    docker {
+        image '172.28.52.31:8081/docker-group/local-dotnet9:latest'
+        registryUrl 'http://172.28.52.31:8081'
+        registryCredentialsId 'nexus-ci'
+        reuseNode true
+        alwaysPull true
+        label 'oracle'
+        args '-u 0:0'
     }
+}
 
     options {
         ansiColor('xterm')
